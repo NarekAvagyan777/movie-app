@@ -1,0 +1,85 @@
+// .image-slider-container {
+//     overflow: hidden;
+//     position: relative;
+//     width: 100%; /* Set to 100% to make it fill the parent container */
+//     height: 200px; /* Adjust the height as needed */
+//     border: 1px solid #ccc;
+//   }
+
+//   .image-slider {
+//     display: flex;
+//     transition: transform 0.3s ease-in-out;
+//   }
+
+//   .slider-image {
+//     width: 100px; /* Adjust the width as needed */
+//     height: 100px; /* Adjust the height as needed */
+//     margin: 0 5px; /* Adjust the margin as needed */
+//   }
+
+// ===============================
+.wrapper {
+  padding-left: 60px;
+  display: flex;
+  //   max-width: 1200px;
+  width: 100%;
+  position: relative;
+}
+
+// .wrapper i:active {
+//   transform: translateY(-50%) scale(0.9);
+// }
+
+// .wrapper i:hover {
+//   background: #f2f2f2;
+// }
+
+// .wrapper i:first-child {
+//   left: -22px;
+//   display: none;
+// }
+
+// .wrapper i:last-child {
+//   right: -22px;
+// }
+
+.wrapper .carousel {
+  font-size: 0;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+.carousel.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging img {
+  pointer-events: none;
+}
+
+.carousel img {
+  height: 340px;
+  object-fit: cover;
+  user-select: none;
+  margin-left: 14px;
+  width: calc((100% - 90px) / 8);
+}
+
+.carousel img:first-child {
+  margin-left: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .carousel img {
+    width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .carousel img {
+    width: 100%;
+  }
+}
